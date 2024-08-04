@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import SideDrawer from './component/SideDrawer'
-
+import MainPage from './component/MainPage/MainPage'
 function App() {
   
 
@@ -10,6 +10,7 @@ function App() {
     <>
       <div className="App">
         <SideDrawer/>
+        <MainPage/>
       </div>
     </>
   )
