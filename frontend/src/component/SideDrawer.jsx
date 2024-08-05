@@ -12,8 +12,10 @@ import {
   Stack,
   Box,
 } from '@chakra-ui/react';
+import CIcon from '@coreui/icons-react';
+import { cilList, cilShieldAlt } from '@coreui/icons';
 import SubjectList from './SubjectList';
-
+//import { SlOptions } from "react-icons/sl";
 const SideDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [placement, setPlacement] = React.useState('left');
@@ -21,7 +23,7 @@ const SideDrawer = () => {
   return (
     <>
       <Button colorScheme='blue' onClick={onOpen}>
-        Open
+      Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
