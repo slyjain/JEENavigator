@@ -18,16 +18,14 @@ const SubjectList = () => {
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-        CHOOSE UR SUBJECTS....
-      </MenuButton>
-      <MenuList>
+      
+      
         <MenuItem>PHYSICS</MenuItem>
         <MenuItem onClick={handleClick}>MATHS</MenuItem>
         <MenuItem>CHEMISTRY</MenuItem>
         <MenuItem>CHAPTER WISE PYQ</MenuItem>
         <MenuItem>DOWNLOAD SHEETS</MenuItem>
-      </MenuList>
+      
     </Menu>
   );
 };
