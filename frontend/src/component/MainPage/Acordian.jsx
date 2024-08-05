@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from './data';
 import { Box } from '@chakra-ui/react';
-import YouTube from "react-youtube";
-import ProgressBar from "@ramonak/react-progress-bar";
+import YouTube from 'react-youtube';
+
 import {
   Accordion,
   AccordionItem,
@@ -11,21 +11,39 @@ import {
   AccordionIcon,
 } from '@chakra-ui/react';
 
-const AccordionComponent = ({setProgress}) => {
+const AccordionComponent = ({ setProgress }) => {
+  const [checkedItems, setCheckedItems] = useState(Array(data.length).fill(false));
+
+  const handleCheckboxClick = (index) => {
+    const newCheckedItems = [...checkedItems];
+    newCheckedItems[index] = !newCheckedItems[index];
+
+    setCheckedItems(newCheckedItems);
+
+    if (newCheckedItems[index]) {
+      setProgress((prevProgress) => prevProgress + 10);
+    } else {
+      setProgress((prevProgress) => prevProgress - 10);
+    }
+  };
+
   const _onReady = (event) => {
     event.target.pauseVideo();
   };
-  
+
   return (
     <Accordion allowToggle>
       {data.map((item, index) => (
         <AccordionItem key={index}>
           <h2>
             <AccordionButton>
-              <Box flex='1' textAlign='left'>
-              <input type="checkbox" onClick={()=>{
-                setProgress((e)=>e+10)
-              }} />  {item.day}
+              <Box flex="1" textAlign="left">
+                <input
+                  type="checkbox"
+                  checked={checkedItems[index]}
+                  onChange={() => handleCheckboxClick(index)}
+                />{' '}
+                {item.day}
               </Box>
               <AccordionIcon />
             </AccordionButton>
