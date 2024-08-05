@@ -35,9 +35,13 @@ const Nav = () => {
     <Box bg="gray.800" p={4}>
       <Flex justify="space-between" align="center">
       <>
-      <Button colorScheme='blue' onClick={onOpen}>
-      Open
-      </Button>
+      <Button  onClick={onOpen} variant='solid' padding={0}   >
+      <img 
+        src="/images/JEE_NAVIGATOR logo.png" 
+        alt="JEE NAVIGATOR Logo" 
+        style={{ Width: '30px', height: '30px' }} 
+      />
+    </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
