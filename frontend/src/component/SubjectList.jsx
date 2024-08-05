@@ -23,7 +23,7 @@ const SubjectList = () => {
       </MenuButton>
       <MenuList>
         <MenuItem>PHYSICS</MenuItem>
-        <MenuItem onClick={handleClick}>MA</MenuItem>
+        <MenuItem onClick={handleClick}>MATHS</MenuItem>
         <MenuItem>CHEMISTRY</MenuItem>
         <MenuItem>CHAPTER WISE PYQ</MenuItem>
         <MenuItem>DOWNLOAD SHEETS</MenuItem>
