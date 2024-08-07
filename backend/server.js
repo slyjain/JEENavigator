@@ -1,7 +1,9 @@
 const express=require("express");
 const app=express();
-const PORT=process.PORT;
+const dotenv=require('dotenv');
 
-app.listen(PORT,()=>{
-    `listening on ${PORT}`
-})
+dotenv.config();
+
+const PORT=process.env.PORT;
+
+app.listen(PORT,console.log(`running on port ${PORT}`));
