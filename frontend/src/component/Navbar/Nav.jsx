@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Text, Button, useColorMode } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate ,Link} from 'react-router-dom';
 
 import {
   Drawer,
@@ -19,7 +19,7 @@ import {
 } from '@chakra-ui/react';
 
 import SubjectList from '../SubjectList';
-const Nav = () => {
+const   Nav = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   
@@ -79,7 +79,7 @@ const Nav = () => {
       </Drawer>
     </>
         <Text color="white" fontSize="xl" fontWeight="bold">
-          JEE-NAVIGATOR
+         <Link to="/">JEE-NAVIGATOR</Link> 
         </Text>
         <Button variant='outline' onClick={toggleColorMode} colorScheme='teal'>
           {colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
