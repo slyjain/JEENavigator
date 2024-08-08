@@ -8,10 +8,10 @@ const PORT=process.env.PORT;
 
 
 app.get("/api/questions",(req,res)=>{
+    res.status(200).json({
+        message:"JEE NAVIGATOR is connected"
+    })})
 
-    res.send("JEENavigator is ONNNNN");
-    console.log("apirequest");
-})
 
 app.listen(PORT,()=>{
     console.log(`listening on ${PORT}`)
