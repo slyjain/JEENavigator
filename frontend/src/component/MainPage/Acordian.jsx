@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
-import data from './data';
-import { Box } from '@chakra-ui/react';
-import YouTube from 'react-youtube';
+import React, { useState } from "react";
+import data from "./data";
+import { Box, Button, Checkbox, Text } from "@chakra-ui/react";
+import YouTube from "react-youtube";
 
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-} from '@chakra-ui/react';
-
-const AccordionComponent = ({ setProgress }) => {
-  const [checkedItems, setCheckedItems] = useState(Array(data.length).fill(false));
+const CardComponent = ({ setProgress }) => {
+  const [checkedItems, setCheckedItems] = useState(
+    Array(data.length).fill(false)
+  );
 
   const handleCheckboxClick = (index) => {
     const newCheckedItems = [...checkedItems];
@@ -32,32 +26,65 @@ const AccordionComponent = ({ setProgress }) => {
   };
 
   return (
-    <Accordion allowToggle>
+    <Box display="flex" flexWrap="wrap" justifyContent="space-around">
       {data.map((item, index) => (
-        <AccordionItem key={index}>
-          <h2>
-            <AccordionButton>
-              <Box flex="1" textAlign="left">
-                <input
-                  type="checkbox"
-                  checked={checkedItems[index]}
-                  onChange={() => handleCheckboxClick(index)}
-                />{' '}
+        <Box
+          key={index}
+          borderWidth="1px"
+          borderRadius="lg"
+          overflow="hidden"
+          width="300px"
+          m="4"
+          boxShadow="lg"
+          alignContent="center"
+        >
+          <Box p="6" textAlign="center">
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              backgroundColor="blue"
+            >
+              <Checkbox
+                isChecked={checkedItems[index]}
+                onChange={() => handleCheckboxClick(index)}
+              >
                 {item.day}
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            <Box>
-              {item.topicName}
-              <YouTube videoId={item.videoId} opts={{ height: '390', width: '640' }} onReady={_onReady} />
+              </Checkbox>
             </Box>
-          </AccordionPanel>
-        </AccordionItem>
+
+            <Box
+              mt="3"
+              fontWeight="bold"
+              fontSize="20px"
+              lineHeight="tight"
+              noOfLines={1}
+            >
+              {item.topicName}
+            </Box>
+
+
+            <Box mt="3" alignContent="center" >
+              <YouTube
+                videoId={item.videoId}
+                opts={{ height: "200", width: "280" }}
+                onReady={_onReady}
+              />
+            </Box>
+
+            <Box display="flex" mt="2" justifyContent="center">
+              <Button mt="2" colorScheme="teal" size="sm">
+                WATCH
+              </Button>
+              <Button mt="2" ml="4" colorScheme="teal" size="sm">
+                PRACTICE QUESTIONS
+              </Button>
+            </Box>
+          </Box>
+        </Box>
       ))}
-    </Accordion>
+    </Box>
   );
 };
 
-export default AccordionComponent;
+export default CardComponent;
