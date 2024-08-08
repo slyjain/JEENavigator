@@ -43,11 +43,13 @@ const CardComponent = ({ setProgress }) => {
               display="flex"
               alignItems="center"
               justifyContent="center"
-              backgroundColor="blue"
+              backgroundColor={`teal`}
+              borderRadius={`10px`}
             >
               <Checkbox
                 isChecked={checkedItems[index]}
                 onChange={() => handleCheckboxClick(index)}
+               
               >
                 {item.day}
               </Checkbox>
