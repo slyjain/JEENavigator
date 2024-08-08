@@ -1,0 +1,215 @@
+.jee-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .jee-question {
+    margin-bottom: 20px;
+  }
+  
+  .jee-question h2 {
+    margin: 0 0 10px 0;
+  }
+  
+  .jee-question p {
+    font-size: 16px;
+  }
+  
+  .jee-options {
+    margin-top: 10px;
+  }
+  
+  .jee-options label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .jee-buttons {
+    margin: 20px 0;
+  }
+  
+  .jee-buttons button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .jee-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .jee-navigation {
+    margin-bottom: 20px;
+  }
+  
+  .jee-nav-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radiu.jee-container {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      
+      .jee-content {
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .jee-main {
+        flex: 3;
+      }
+      
+      .jee-question {
+        margin-bottom: 20px;
+      }
+      
+      .jee-question h2 {
+        margin: 0 0 10px 0;
+      }
+      
+      .jee-question p {
+        font-size: 16px;
+      }
+      
+      .jee-options {
+        margin-top: 10px;
+      }
+      
+      .jee-options label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      
+      .jee-buttons {
+        margin: 20px 0;
+      }
+      
+      .jee-buttons button {
+        margin-right: 10px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      
+      .jee-buttons button:hover {
+        background-color: #0056b3;
+      }
+      
+      .jee-navigation {
+        margin-bottom: 20px;
+      }
+      
+      .jee-nav-button {
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #28a745;
+        color: #fff;
+        cursor: pointer;
+      }
+      
+      .jee-nav-button:hover {
+        background-color: #218838;
+      }
+      
+      .jee-question-status {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      
+      .jee-status-indicator {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+        font-size: 14px;
+      }
+      
+      .jee-question-grid {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+      }
+      
+      .jee-grid-item {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+        text-align: center;
+        line-height: 50px;
+      }
+      
+      .jee-grid-item:hover {
+        background-color: #f1f1f1;
+      }
+      s: 4px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .jee-nav-button:hover {
+    background-color: #218838;
+  }
+  
+  .jee-question-status {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .jee-status-indicator {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+  }
+  
+  .jee-question-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .jee-grid-item {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+  }
+  
+  .jee-grid-item:hover {
+    background-color: #f1f1f1;
+  }
+  

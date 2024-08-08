@@ -1,7 +1,12 @@
 const express=require("express");
 const app=express();
-const PORT=process.PORT;
-
+const dotenv=require("dotenv")
+dotenv.config();
+const PORT=process.env.PORT;
+app.get("/",(req,res)=>{
+    res.status(200).send("JEENavigator is ONNNNN")
+})
 app.listen(PORT,()=>{
-    `listening on ${PORT}`
+    console.log(`listening on ${PORT}`)
+    
 })
