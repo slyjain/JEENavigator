@@ -8,9 +8,7 @@ import JEEpaper from './component/JEEpaper/JEEpaper';
 function App() {
   const [apiData,setApiData]=useState("")
   useEffect(()=>{
-    fetch("http://localhost:3000/get",{
-      method=""
-    }).then(res=>res.json()).then(data=>{
+    fetch("/api/questions").then(res=>res.json()).then(data=>{
       setApiData(data.message);
     },[])
   })

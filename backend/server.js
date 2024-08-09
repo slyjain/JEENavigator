@@ -7,10 +7,13 @@ dotenv.config();
 
 app.use(cors()); 
 const PORT=process.env.PORT;
-app.get("/get",(req,res)=>{
+
+
+app.get("/api/questions",(req,res)=>{
     res.status(200).json({
         message:"JEE NAVIGATOR is connected"
     })})
+
 
 app.listen(PORT,()=>{
     console.log(`listening on ${PORT}`)
