@@ -6,6 +6,7 @@ const connectDB = require("./config/database");
 dotenv.config();
 
 connectDB();
+
 app.use(cors()); 
 const PORT=process.env.PORT;
 
