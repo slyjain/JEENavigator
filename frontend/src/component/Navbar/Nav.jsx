@@ -48,7 +48,7 @@ const   Nav = () => {
           <DrawerHeader borderBottomWidth='1px'>
             <Button onClick={()=>{
               
-            }}>JEE_NAVIGATOR</Button>
+            }}>Quick Navigate</Button>
             
             <DrawerCloseButton />
           </DrawerHeader>
