@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
+
+import ProgressBar from "@ramonak/react-progress-bar";
+
 import data from "./data";
 import { Box, Button, Checkbox, Text } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 
-const CardComponent = ({ setProgress }) => {
+
+
+
+const Maths = () => {
+  
+  const [progress, setProgress] = React.useState(0);
+
   const [checkedItems, setCheckedItems] = useState(
     Array(data.length).fill(false)
   );
@@ -24,9 +33,14 @@ const CardComponent = ({ setProgress }) => {
   const _onReady = (event) => {
     event.target.pauseVideo();
   };
-
+    
   return (
-    <Box display="flex" flexWrap="wrap" justifyContent="space-around">
+   <>
+   <div className="heading">Straight Lines<ProgressBar completed={progress} /></div>
+   <div className="description">By doing this course you will become expert at straight lines</div>
+ 
+
+   <Box display="flex" flexWrap="wrap" justifyContent="space-around">
       {data.map((item, index) => (
         <Box
           key={index}
@@ -86,7 +100,11 @@ const CardComponent = ({ setProgress }) => {
         </Box>
       ))}
     </Box>
-  );
-};
 
-export default CardComponent;
+
+
+   </>
+  )
+}
+
+export default Maths
